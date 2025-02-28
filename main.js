@@ -9,6 +9,8 @@ const memeCanvas = document.getElementById("meme");
 // to serve as "layers" of the meme
 const selfieLayer = document.createElement("canvas");
 const textLayer = document.createElement("canvas");
+
+// set dimensions of layer canvases with that of memeCanvas
 for (let canvas of [selfieLayer, textLayer]) {
   canvas.width = memeCanvas.width;
   canvas.height = memeCanvas.height;

@@ -24,12 +24,21 @@ export async function getVideo(previewCanvas) {
 
 export function drawVideo(video, canvas) {
   const context = canvas.getContext("2d");
+  console.log("draw video...");
+  console.log("video dimension: ", video.videoWidth, "x", video.videoHeight);
+  console.log("canvas dimension: ", canvas.width, "x", canvas.height);
   context.drawImage(video, 0, 0, canvas.width, canvas.height);
 }
 
 export function drawPreview(video, canvas) {
   const context = canvas.getContext("2d");
+  console.log("draw preview...");
+  console.log("video dimension: ", video.videoWidth, "x", video.videoHeight);
+  console.log("canvas dimension: ", canvas.width, "x", canvas.height);
+
   setInterval(() => {
+    // using the method with the full parameters list, to make it more clear
+    // that video is drawn with the canvas dimension
     context.drawImage(
       video,
       0,
