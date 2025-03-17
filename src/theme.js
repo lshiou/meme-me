@@ -1,4 +1,4 @@
-export function getThemeToggle() {
+export function setupThemeToggleListener() {
   const doc = document.documentElement;
   const toggle = document.getElementById("toggle");
 
@@ -8,5 +8,4 @@ export function getThemeToggle() {
   };
 
   toggle.addEventListener("change", toggleDarkMode);
-  return toggle;
 }
